@@ -128,38 +128,86 @@
 
 //----------6---------------
 
-var brands = ["Gucci , Dolce&Gabanna , Addidas , Nike , Puma , Versace"]
+// var brands = ["Gucci , Dolce&Gabanna , Addidas , Nike , Puma , Versace"]
 
-var cars = ["BMW , Audi , Mercedess , Opel , Lada , Jeep , Toyota"]
+// var cars = ["BMW , Audi , Mercedess , Opel , Lada , Jeep , Toyota"]
 
-var books = ["Book N1, Book N2 , Book N3 , Book N4 , Book N5"]
+// var books = ["Book N1, Book N2 , Book N3 , Book N4 , Book N5"]
 
-var metro = ["28 May , 20 Yanuar , Koroglu , Ulduz , Narimanov"]
+// var metro = ["28 May , 20 Yanuar , Koroglu , Ulduz , Narimanov"]
 
-var cities = ["Baku , Nakhciav , Sumgait , Ganja , Shusa"]
+// var cities = ["Baku , Nakhciav , Sumgait , Ganja , Shusa"]
 
 
-for( var a = 0; a < brands.length; a++) {
-    console.log(brands[a]);
+// for( var a = 0; a < brands.length; a++) {
+//     console.log(brands[a]);
+// }
+// console.log("----------");
+
+// for(var b = 0; b < cars.length; b++) {
+//     console.log(cars[b]);
+// }
+// console.log("----------");
+
+// for (let c = 0; c < books.length; c++) {
+//     console.log(books[c]);
+// }
+// console.log("----------");
+
+// for (let d = 0; d < metro.length; d++) {
+//     console.log(metro[d]);    
+// }
+// console.log("----------");
+
+// for (let e = 0; e < cities.length; e++) {
+//     console.log(cities[e]);    
+// }
+// console.log("----------");  
+
+//-------------------------
+
+// var text = 'Write a JavaScript program that displays the largest integer among two integers'
+
+// var newText = text.replaceAll( 'a' , 'x') ;
+
+// console.log(newText);
+
+//-------------------------
+
+// var text = 'Write a JavaScript program that displays the largest integer among two integers'
+
+// var newText = ""
+
+// for (let i = 0; i < text.length; i++) {
+//     if (text[i] === "a") {
+//         newText += "x"
+//     }else {
+//         newText += text[i]
+//     }
+// }
+
+// console.log(text, newText);
+
+//-----------------------------
+
+var text = 'Write a JavaScript program that displays the largest integer among two integers'
+
+var arr = text.split(` `)
+
+for (var i = 0; i < arr.length; i++) {
+    
+    for (var j = i + 1; j < arr.length; j++) {
+        if (arr[i].length > arr[j].length) {
+            var sort = arr[i] ;
+            arr[i] = arr[j] ; 
+            arr[j] = sort ;
+        }
+    }
 }
-console.log("----------");
+console.log(arr);
 
-for(var b = 0; b < cars.length; b++) {
-    console.log(cars[b]);
-}
-console.log("----------");
 
-for (let c = 0; c < books.length; c++) {
-    console.log(books[c]);
-}
-console.log("----------");
 
-for (let d = 0; d < metro.length; d++) {
-    console.log(metro[d]);    
-}
-console.log("----------");
+// arr.sort((a , b ) => a.length - b.length);
 
-for (let e = 0; e < cities.length; e++) {
-    console.log(cities[e]);    
-}
-console.log("----------");  
+// console.log(arr);
